@@ -12,5 +12,5 @@ jobs:
         with:
           who-to-greet: 'ADHITHI SURESHKUMAR'
       - name: Log Geeting Time  TESTING
-        run: echo "$ {{ steps.greet.outputs.time }}"
+        run: echo "${{ steps.greet.outputs.time }}"
       
