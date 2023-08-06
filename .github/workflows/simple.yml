@@ -6,9 +6,9 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps: 
-      - name: echo a string
+      - name: echo a string TESTING
         run: echo "Hello world"
-      - name: multiline Scritt
+      - name: multiline Scritt TESTING
         run: |
           node -v
           npm -v
