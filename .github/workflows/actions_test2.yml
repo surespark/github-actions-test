@@ -1,49 +1,48 @@
 name: Actions Workflow in Actions
 
 on:
-  push:
-    branches:
-      - main
-      - develop
-  pull_request:
-    branches:
-      - main
-  # repository_dispatch:
-  #   types: [build]
-  # # push:
-  # # schedule:
-  # #   - cron: "0/5 * * * *"
-  # #   - cron: "0/6 * * * *"
-  # pull_request:
-  #   types: [closed, assigned, opened, reopened]
+    push:
+        branches:
+            - main
+            # - develop
+    pull_request:
+        branches:
+            - main
+    # repository_dispatch:
+    #   types: [build]
+    # # push:
+    # # schedule:
+    # #   - cron: "0/5 * * * *"
+    # #   - cron: "0/6 * * * *"
+    # pull_request:
+    #   types: [closed, assigned, opened, reopened]
 
-jobs: 
-  run-github-actions:
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Payload TESTING
-        run: echo ${{ github.event.client_payload.env }}
-      - name: List Files TESTING
-        run: |
-          pwd
-          ls -a
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-          echo "${{ github.token }}"
-          # git clone git@github: $GITHUB_REPOSITORY
-          # git checkout $GITHUB_SHA
-      - name: Checkout Actions TESTING
-        uses: actions/checkout@v1
-      - name: List Files after Checkout TESTING
-        run: |
-          pwd
-          ls -a
-      - name: Simple Java Script Actions
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: 'ADHITHI SURESHKUMAR'
-      - name: Log Geeting Time  TESTING
-        run: echo "${{ steps.greet.outputs.time }}"
-      
+jobs:
+    run-github-actions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Payload TESTING
+              run: echo ${{ github.event.client_payload.env }}
+            - name: List Files TESTING
+              run: |
+                  pwd
+                  ls -a
+                  echo $GITHUB_SHA
+                  echo $GITHUB_REPOSITORY
+                  echo $GITHUB_WORKSPACE
+                  echo "${{ github.token }}"
+                  # git clone git@github: $GITHUB_REPOSITORY
+                  # git checkout $GITHUB_SHA
+            - name: Checkout Actions TESTING
+              uses: actions/checkout@v1
+            - name: List Files after Checkout TESTING
+              run: |
+                  pwd
+                  ls -a
+            - name: Simple Java Script Actions
+              id: greet
+              uses: actions/hello-world-javascript-action@v1
+              with:
+                  who-to-greet: "ADHITHI SURESHKUMAR"
+            - name: Log Geeting Time  TESTING
+              run: echo "${{ steps.greet.outputs.time }}"
