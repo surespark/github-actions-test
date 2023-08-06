@@ -15,6 +15,5 @@ jobs:
       - name: Python Command TESTING
         run: |
           import platform
-          print
-          (platform.processor())
+          print(platform.processor())
         shell: python
