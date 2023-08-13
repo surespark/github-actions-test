@@ -19,7 +19,7 @@ on:
 
 jobs:
     run-github-actions:
-        runs-on: target1
+        runs-on: ubuntu-latest
         steps:
             - name: Payload TESTING
               run: echo ${{ github.event.client_payload.env }}
