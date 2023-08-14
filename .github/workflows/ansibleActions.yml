@@ -23,6 +23,7 @@ jobs:
       - name: OS PATCHING Ansible-Playbook
         run: |
           cd /ansible
-          ansible-playbook -b --extra-vars 'target=target_jb1' playbooks/OS-Patching.yml
+          ansible-playbook -b --extra-vars 'target=target_jb1' playbooks/getFreeMemory.yml
+          # ansible-playbook -b --extra-vars 'target=target_jb1' playbooks/OS-Patching.yml
         
 
