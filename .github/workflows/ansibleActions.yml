@@ -17,4 +17,12 @@ jobs:
         run: |
           cd /ansible
           ansible-playbook -b --extra-vars 'target=target_jb1' playbooks/getFreeMemory.yml
+  Ansible-Playbook-OS-PATCHING:
+    runs-on: target2
+    steps:
+      - name: OS PATCHING Ansible-Playbook
+        run: |
+          cd /ansible
+          ansible-playbook -b --extra-vars 'target=target_jb1' playbooks/OS-Patching.yml
+        
 
