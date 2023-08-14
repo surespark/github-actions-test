@@ -1,0 +1,11 @@
+name: Ansible Actions
+on: push
+
+jobs:
+  node-docker:
+    runs-on: target2
+    steps:
+      - name: Test Ansible-version
+        run: |
+          ansible --version
+          cat /etc/os-release
