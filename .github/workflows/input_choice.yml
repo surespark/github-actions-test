@@ -6,6 +6,7 @@ on:
             environment:
                 type: environment
                 description: Select the environment
+                default: "Production"
             boolean:
                 type: boolean
                 description: True or False
