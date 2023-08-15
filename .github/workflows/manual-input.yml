@@ -33,5 +33,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: |
+        hostname -i
+        hostname
+        whoami
+        pwd
+        ls  -ltr -a
         echo "Hello ${{ github.event.inputs.name }}"
         echo "Age ${{ github.event.inputs.Age }}"      
