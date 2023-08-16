@@ -17,6 +17,22 @@ on:
                     - foo
                     - bar
                     - baz
+            name:
+                type: choice
+                description: Who to greet
+                options: 
+                  - monalisa
+                  - cschleiden
+            message:
+                required: true
+            use-emoji:
+                type: boolean
+                description: Include 🎉🤣 emojis
+            environmental:
+                type: environment
+                    
+
+                    
 jobs:
     build:
         runs-on: ubuntu-latest
